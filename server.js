@@ -24,6 +24,7 @@ app.use(
 // Environment variables
 const BOT_TOKEN = process.env.BOT_TOKEN;
 const ADMIN_ROLE_ID = process.env.ADMIN_ROLE_ID;
+const  COADMIN_ROLE_ID = process.env.COADMIN_ROLE_ID
 const DATABASE_CHANNEL_ID = process.env.DATABASE_CHANNEL_ID;
 
 // Hardcoded credentials (replace with a database in production)
@@ -86,6 +87,7 @@ bot.on('voiceStateUpdate', async (oldState, newState) => {
 
   // Check if the user has the admin role
   if (!member.roles.cache.has(ADMIN_ROLE_ID)) return;
+  if (!member.roles.cache.has(COADMIN_ROLE_ID)) return;
 
   const adminId = member.id;
   const now = Date.now();
@@ -133,6 +135,7 @@ bot.on('voiceStateUpdate', async (oldState, newState) => {
     }
   }
 });
+
 
 // Start the bot
 bot.login(BOT_TOKEN);
