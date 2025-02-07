@@ -24,7 +24,7 @@ app.use(
 // Environment variables
 const BOT_TOKEN = process.env.BOT_TOKEN;
 const ADMIN_ROLE_ID = process.env.ADMIN_ROLE_ID;
-const  COADMIN_ROLE_ID = process.env.COADMIN_ROLE_ID
+const  COADMIN_ROLE_ID = process.env.COADMIN_ROLE_ID;
 const DATABASE_CHANNEL_ID = process.env.DATABASE_CHANNEL_ID;
 
 // Hardcoded credentials (replace with a database in production)
